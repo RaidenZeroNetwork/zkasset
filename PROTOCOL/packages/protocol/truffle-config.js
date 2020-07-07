@@ -164,8 +164,8 @@ module.exports = {
         },
         goerli: {
             provider: () => new HDWalletProvider(mnemonic, `https://goerli.infura.io/v3/${infuraKey}`), //goerliProvider,
-            gas: 7e6,
-            gasPrice: toHex(toWei('10', 'gwei')),
+            gas: 1e6,
+            gasPrice: toHex(toWei('1', 'gwei')),
             network_id: '5',
             confirmations: 3,
             skipDryRun: true,
