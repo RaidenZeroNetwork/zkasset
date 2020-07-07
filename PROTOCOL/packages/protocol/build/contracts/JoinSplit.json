@@ -2,35 +2,9 @@
   "contractName": "JoinSplit",
   "abi": [
     {
-      "constant": true,
-      "inputs": [
-        {
-          "internalType": "bytes",
-          "name": "",
-          "type": "bytes"
-        },
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256[6]",
-          "name": "",
-          "type": "uint256[6]"
-        }
-      ],
-      "name": "validateJoinSplit",
-      "outputs": [
-        {
-          "internalType": "bytes",
-          "name": "",
-          "type": "bytes"
-        }
-      ],
       "payable": false,
-      "stateMutability": "pure",
-      "type": "function"
+      "stateMutability": "nonpayable",
+      "type": "fallback"
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"fallback\"}],\"devdoc\":{\"author\":\"Zachary Williamson, AZTEC\",\"details\":\"Library to validate AZTEC JoinSplit proofs Don't include this as an internal library. This contract uses a static memory table to cache elliptic curve primitives and hashes. Calling this internally from another function will lead to memory mutation and undefined behaviour. The intended use case is to call this externally via `staticcall`. External calls to OptimizedAZTEC can be treated as pure functions as this contract contains no storage and makes no external calls (other than to precompiles) * Copyright 2020 Spilsbury Holdings Ltd  * Licensed under the GNU Lesser General Public Licence, Version 3.0 (the \\\"License\\\"); you may not use this file except in compliance with the License. * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details. * You should have received a copy of the GNU Lesser General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.*\",\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/minakokojima/Documents/GitHub/zkasset/PROTOCOL/packages/protocol/contracts/ACE/validators/joinSplit/JoinSplit.sol\":\"JoinSplit\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/minakokojima/Documents/GitHub/zkasset/PROTOCOL/packages/protocol/contracts/ACE/validators/joinSplit/JoinSplit.sol\":{\"keccak256\":\"0xc75f0e3d340f3ca26b2722923574cd55910080eb7c003d3e3eb7f1d2d8e73fdf\",\"urls\":[\"bzz-raw://b661784618a98d6b733be87bbddd5d3e1bb09e293fc663d74a0246a4a17138a7\",\"dweb:/ipfs/QmcFJzY5DeSZ8r7Xs4e47JMQzgBgMS3yn9ApMBNEpzHgrs\"]},\"/Users/minakokojima/Documents/GitHub/zkasset/PROTOCOL/packages/protocol/contracts/ACE/validators/joinSplit/JoinSplitABIEncoder.sol\":{\"keccak256\":\"0x3190857ee003e501e17792f20f8bd009a4b9431dde192029b17b6ba88676ad24\",\"urls\":[\"bzz-raw://8a1ef5a2a65c105ec9a2d1eff96b457986e5f339bc949b4efa797b8e02bd11d0\",\"dweb:/ipfs/QmZLWXQXXLTeUf5Lp3QxUT6myepdCkRGNkSXAdyS1vYHJL\"]},\"/Users/minakokojima/Documents/GitHub/zkasset/PROTOCOL/packages/protocol/contracts/interfaces/JoinSplitInterface.sol\":{\"keccak256\":\"0xe70a23d45b128f2fab3f9ced3285f315e830d91807334f5f3ec36360013dc3c8\",\"urls\":[\"bzz-raw://bf397205030113edaef8686a9d9f08b02a849e5a0bc4506223a526b5c1093eec\",\"dweb:/ipfs/QmWLwtMaf5ZX7XGKjuuSadA2enuMNKMiFcw7RpSNzkHeF5\"]}},\"version\":1}",
@@ -373,8 +347,7 @@
     }
   },
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-07-07T07:04:58.275Z",
-  "networkType": "ethereum",
+  "updatedAt": "2020-07-07T07:34:22.267Z",
   "devdoc": {
     "author": "Zachary Williamson, AZTEC",
     "details": "Library to validate AZTEC JoinSplit proofs Don't include this as an internal library. This contract uses a static memory table to cache elliptic curve primitives and hashes. Calling this internally from another function will lead to memory mutation and undefined behaviour. The intended use case is to call this externally via `staticcall`. External calls to OptimizedAZTEC can be treated as pure functions as this contract contains no storage and makes no external calls (other than to precompiles) * Copyright 2020 Spilsbury Holdings Ltd  * Licensed under the GNU Lesser General Public Licence, Version 3.0 (the \"License\"); you may not use this file except in compliance with the License. * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details. * You should have received a copy of the GNU Lesser General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.*",

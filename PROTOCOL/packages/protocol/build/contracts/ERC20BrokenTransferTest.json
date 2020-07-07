@@ -1146,7 +1146,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-07-07T07:00:20.267Z",
+  "updatedAt": "2020-07-07T07:34:22.589Z",
   "devdoc": {
     "details": "Extending ERC20 by adding some functions that always revert when called.",
     "methods": {

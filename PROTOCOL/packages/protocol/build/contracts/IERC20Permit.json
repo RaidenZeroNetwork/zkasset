@@ -2761,7 +2761,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-07-07T07:00:20.173Z",
+  "updatedAt": "2020-07-07T07:34:22.434Z",
   "devdoc": {
     "details": "Interface for ERC20 with minting function Sourced from OpenZeppelin  (https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/token/ERC20/IERC20.sol)  and with an added permit() and mint() function. ",
     "methods": {},

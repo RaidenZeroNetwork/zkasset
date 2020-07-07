@@ -2,35 +2,9 @@
   "contractName": "PublicRange",
   "abi": [
     {
-      "constant": true,
-      "inputs": [
-        {
-          "internalType": "bytes",
-          "name": "",
-          "type": "bytes"
-        },
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256[6]",
-          "name": "",
-          "type": "uint256[6]"
-        }
-      ],
-      "name": "validatePublicRange",
-      "outputs": [
-        {
-          "internalType": "bytes",
-          "name": "",
-          "type": "bytes"
-        }
-      ],
       "payable": false,
-      "stateMutability": "pure",
-      "type": "function"
+      "stateMutability": "nonpayable",
+      "type": "fallback"
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"fallback\"}],\"devdoc\":{\"author\":\"AZTEC\",\"details\":\"Library to validate AZTEC public range zero-knowledge proofs Don't include this as an internal library. This contract uses  a static memory table to cache elliptic curve primitives and hashes. Calling this internally from another function will lead to memory  mutation and undefined behaviour. The intended use case is to call this externally via `staticcall`. External  calls to OptimizedAZTEC can be treated as pure functions as this contract  contains no storage and makes no external calls (other than to precompiles) * Copyright 2020 Spilsbury Holdings Ltd  * Licensed under the GNU Lesser General Public Licence, Version 3.0 (the \\\"License\\\"); you may not use this file except in compliance with the License. * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details. * You should have received a copy of the GNU Lesser General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.*\",\"methods\":{},\"title\":\"PublicRange\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/minakokojima/Documents/GitHub/zkasset/PROTOCOL/packages/protocol/contracts/ACE/validators/publicRange/PublicRange.sol\":\"PublicRange\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/minakokojima/Documents/GitHub/zkasset/PROTOCOL/packages/protocol/contracts/ACE/validators/publicRange/PublicRange.sol\":{\"keccak256\":\"0xb26ea30e65d6730ef73775d6a818489c76493d01912377b027b85d69d889acaf\",\"urls\":[\"bzz-raw://991ec768cd7001312e5fc981fcb1410d86098fa32dc4491a31dda5ca1cbcca02\",\"dweb:/ipfs/QmbduuDHEWdrGVBynHrpzEDteW4vYLirYUZkUx2opa6kyq\"]},\"/Users/minakokojima/Documents/GitHub/zkasset/PROTOCOL/packages/protocol/contracts/ACE/validators/publicRange/PublicRangeABIEncoder.sol\":{\"keccak256\":\"0x9ba5bd95dc20458facd8e7b4652b82e45810a46e1dbad6cb0d7cff3d907f45c9\",\"urls\":[\"bzz-raw://3d1fd21b47c141a013ba3bcee9c4252e4cf7127d91f05139e2512f7c7cfc221b\",\"dweb:/ipfs/QmdHXws4Ro5RReYpwUmvEWynbD58fTFRnetfczxixgnKrF\"]},\"/Users/minakokojima/Documents/GitHub/zkasset/PROTOCOL/packages/protocol/contracts/interfaces/PublicRangeInterface.sol\":{\"keccak256\":\"0xead6e9f28c1e7e971f50645ce34e938ffd2862ef8ce615d2986afd4c30b8fb0d\",\"urls\":[\"bzz-raw://07d7f4ac25ebdad3d263deefacaf5fe0c60d3e9115a6f145ddc615252ec9aac3\",\"dweb:/ipfs/QmS64iPo7paHRtTK8mTVEvsio5VQfLBQ1ZwJPdC6Anxh6Z\"]}},\"version\":1}",
@@ -373,8 +347,7 @@
     }
   },
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-07-07T07:13:13.693Z",
-  "networkType": "ethereum",
+  "updatedAt": "2020-07-07T07:34:22.276Z",
   "devdoc": {
     "author": "AZTEC",
     "details": "Library to validate AZTEC public range zero-knowledge proofs Don't include this as an internal library. This contract uses  a static memory table to cache elliptic curve primitives and hashes. Calling this internally from another function will lead to memory  mutation and undefined behaviour. The intended use case is to call this externally via `staticcall`. External  calls to OptimizedAZTEC can be treated as pure functions as this contract  contains no storage and makes no external calls (other than to precompiles) * Copyright 2020 Spilsbury Holdings Ltd  * Licensed under the GNU Lesser General Public Licence, Version 3.0 (the \"License\"); you may not use this file except in compliance with the License. * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details. * You should have received a copy of the GNU Lesser General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.*",

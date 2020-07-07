@@ -2,35 +2,9 @@
   "contractName": "Dividend",
   "abi": [
     {
-      "constant": true,
-      "inputs": [
-        {
-          "internalType": "bytes",
-          "name": "",
-          "type": "bytes"
-        },
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256[6]",
-          "name": "",
-          "type": "uint256[6]"
-        }
-      ],
-      "name": "validateDividend",
-      "outputs": [
-        {
-          "internalType": "bytes",
-          "name": "",
-          "type": "bytes"
-        }
-      ],
       "payable": false,
-      "stateMutability": "pure",
-      "type": "function"
+      "stateMutability": "nonpayable",
+      "type": "fallback"
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"fallback\"}],\"devdoc\":{\"author\":\"AZTEC\",\"details\":\"Library to validate AZTEC dividend proofs.  Don't include this as an internal library. This contract uses a static memory table to cache elliptic curve primitives and hashes. Calling this internally from another function will lead to memory mutation and undefined behaviour. The intended use case is to call this externally via `staticcall`. External calls to OptimizedAZTEC can be treated as pure functions as this contract contains no storage and makes no external calls (other than to precompiles). * Copyright 2020 Spilsbury Holdings Ltd  * Licensed under the GNU Lesser General Public Licence, Version 3.0 (the \\\"License\\\"); you may not use this file except in compliance with the License. * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details. * You should have received a copy of the GNU Lesser General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.*\",\"methods\":{},\"title\":\"Dividend\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/minakokojima/Documents/GitHub/zkasset/PROTOCOL/packages/protocol/contracts/ACE/validators/dividend/Dividend.sol\":\"Dividend\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/minakokojima/Documents/GitHub/zkasset/PROTOCOL/packages/protocol/contracts/ACE/validators/dividend/Dividend.sol\":{\"keccak256\":\"0x1c8f61377dff098e05438e0896b3f2d8cabab4b7560e1c47fab964f3f43b0c96\",\"urls\":[\"bzz-raw://bebc95485328adb7b025a58679c6a63c32928895d1369d0d5558ad41c80471f9\",\"dweb:/ipfs/QmbtzkuVAEyALMyR1cZABpEeqphj3KC8irGyJCYKbp8i2Y\"]},\"/Users/minakokojima/Documents/GitHub/zkasset/PROTOCOL/packages/protocol/contracts/ACE/validators/dividend/DividendABIEncoder.sol\":{\"keccak256\":\"0xb11b2e8cabc3e10765078cbe642a0e51d9392692494b9624c2bd3490573cb332\",\"urls\":[\"bzz-raw://5b7e205288f10abd91b972381d1c3a91cd1de434894428fde10246851e2e02f6\",\"dweb:/ipfs/QmZ8GoqrRvrnizQPfpLEuQyaASuBgG88unaxQ5seazQ1Q7\"]},\"/Users/minakokojima/Documents/GitHub/zkasset/PROTOCOL/packages/protocol/contracts/interfaces/DividendInterface.sol\":{\"keccak256\":\"0x03c33cf3dfa578729324bcd3c0e92fdafea584ac91b7ca05b4921bb197ec0a4b\",\"urls\":[\"bzz-raw://84f87de2721062c58a5e60411da573d23f25d4f9a614a57f1b6396497452642d\",\"dweb:/ipfs/QmRo6oJLjJGn9B8CDgr9uH4rbKTovn7593HfVaoF3K3HoX\"]}},\"version\":1}",
@@ -373,8 +347,7 @@
     }
   },
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-07-07T07:10:13.912Z",
-  "networkType": "ethereum",
+  "updatedAt": "2020-07-07T07:34:22.264Z",
   "devdoc": {
     "author": "AZTEC",
     "details": "Library to validate AZTEC dividend proofs.  Don't include this as an internal library. This contract uses a static memory table to cache elliptic curve primitives and hashes. Calling this internally from another function will lead to memory mutation and undefined behaviour. The intended use case is to call this externally via `staticcall`. External calls to OptimizedAZTEC can be treated as pure functions as this contract contains no storage and makes no external calls (other than to precompiles). * Copyright 2020 Spilsbury Holdings Ltd  * Licensed under the GNU Lesser General Public Licence, Version 3.0 (the \"License\"); you may not use this file except in compliance with the License. * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details. * You should have received a copy of the GNU Lesser General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.*",

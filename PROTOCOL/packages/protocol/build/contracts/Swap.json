@@ -2,35 +2,9 @@
   "contractName": "Swap",
   "abi": [
     {
-      "constant": true,
-      "inputs": [
-        {
-          "internalType": "bytes",
-          "name": "",
-          "type": "bytes"
-        },
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256[6]",
-          "name": "",
-          "type": "uint256[6]"
-        }
-      ],
-      "name": "validateSwap",
-      "outputs": [
-        {
-          "internalType": "bytes",
-          "name": "",
-          "type": "bytes"
-        }
-      ],
       "payable": false,
-      "stateMutability": "pure",
-      "type": "function"
+      "stateMutability": "nonpayable",
+      "type": "fallback"
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"fallback\"}],\"devdoc\":{\"author\":\"AZTEC\",\"details\":\"Library to validate Swap proofs Don't include this as an internal library. This contract uses a static memory table to cache elliptic curve primitives and hashes. Calling this internally from another function will lead to memory mutation and undefined behaviour. The intended use case is to call this externally via `staticcall`. External calls to OptimizedAZTEC can be treated as pure functions as this contract contains no storage and makes no external calls (other than to precompiles)  * Copyright 2020 Spilsbury Holdings Ltd  * Licensed under the GNU Lesser General Public Licence, Version 3.0 (the \\\"License\\\"); you may not use this file except in compliance with the License. * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details. * You should have received a copy of the GNU Lesser General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.*\",\"methods\":{},\"title\":\"Swap\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/minakokojima/Documents/GitHub/zkasset/PROTOCOL/packages/protocol/contracts/ACE/validators/swap/Swap.sol\":\"Swap\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/minakokojima/Documents/GitHub/zkasset/PROTOCOL/packages/protocol/contracts/ACE/validators/swap/Swap.sol\":{\"keccak256\":\"0x12be40c1d9ba8b14886488b44c704dca0cfa224528ed3261463db4b6f896c083\",\"urls\":[\"bzz-raw://f1b4b61875e576b3026c5e354457d949108b619468fc1d51c267d92a0a02fd27\",\"dweb:/ipfs/QmRVjt72V1CtXBToNiZ1a8mqMwBVuLYk5D9THpSQivCWSi\"]},\"/Users/minakokojima/Documents/GitHub/zkasset/PROTOCOL/packages/protocol/contracts/ACE/validators/swap/SwapABIEncoder.sol\":{\"keccak256\":\"0x5f91754f15202af4cda76744cbd749b7c798ca34e45078fb1b7a75446069769e\",\"urls\":[\"bzz-raw://ba11d958acf87de38062ec978554780039aa64da152f45edce368704e98bf58d\",\"dweb:/ipfs/QmSvv2hjGNMQNjnCgNEeunufvTYQJD12wAfzjynqo9p7rZ\"]}},\"version\":1}",
@@ -351,8 +325,7 @@
     }
   },
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-07-07T07:08:28.859Z",
-  "networkType": "ethereum",
+  "updatedAt": "2020-07-07T07:34:22.279Z",
   "devdoc": {
     "author": "AZTEC",
     "details": "Library to validate Swap proofs Don't include this as an internal library. This contract uses a static memory table to cache elliptic curve primitives and hashes. Calling this internally from another function will lead to memory mutation and undefined behaviour. The intended use case is to call this externally via `staticcall`. External calls to OptimizedAZTEC can be treated as pure functions as this contract contains no storage and makes no external calls (other than to precompiles)  * Copyright 2020 Spilsbury Holdings Ltd  * Licensed under the GNU Lesser General Public Licence, Version 3.0 (the \"License\"); you may not use this file except in compliance with the License. * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details. * You should have received a copy of the GNU Lesser General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.*",
