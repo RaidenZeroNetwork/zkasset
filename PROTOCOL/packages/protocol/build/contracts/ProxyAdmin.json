@@ -472,7 +472,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-07-07T07:34:22.479Z",
+  "updatedAt": "2020-07-07T08:39:41.476Z",
   "devdoc": {
     "details": "Minimal interface for the proxy contract",
     "methods": {},

@@ -27284,7 +27284,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-07-07T07:34:22.192Z",
+  "updatedAt": "2020-07-07T08:39:41.213Z",
   "devdoc": {
     "author": "AZTEC",
     "details": "NoteRegistryManager will be inherrited by ACE, and its purpose is to manage the entire lifecycle of noteRegistries and of factories. It defines the methods which are used to deploy and upgrade registries, the methods to enact state changes sent by the owner of a registry, and it also manages the list of factories which are available. * Copyright 2020 Spilsbury Holdings Ltd  * Licensed under the GNU Lesser General Public Licence, Version 3.0 (the \"License\"); you may not use this file except in compliance with the License. * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details. * You should have received a copy of the GNU Lesser General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.*",
