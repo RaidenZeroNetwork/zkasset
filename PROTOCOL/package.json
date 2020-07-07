@@ -1,0 +1,65 @@
+{
+  "name": "aztec-monorepo",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "8.1.0",
+    "@commitlint/config-conventional": "7.5.0",
+    "@commitlint/config-lerna-scopes": "8.1.0",
+    "@semantic-release/commit-analyzer": "^6.1.0",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/github": "^5.2.10",
+    "@semantic-release/npm": "^5.1.4",
+    "@semantic-release/release-notes-generator": "^7.1.4",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "husky": "^3.0.3",
+    "lerna": "^3.13.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.16.4",
+    "semantic-release": "^15.12.4",
+    "shx": "^0.3.2",
+    "wsrun": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=8.3"
+  },
+  "private": true,
+  "scripts": {
+    "build": "lerna link && yarn wsrun --package $PKG --recursive --stages -c build",
+    "build:docs": "yarn wsrun --package $PKG --parallel -c build:docs",
+    "build:prod": "lerna link && yarn wsrun --package $PKG --recursive --stages -c build:prod",
+    "clean": "yarn wsrun --package $PKG --parallel -c clean",
+    "clean:node_modules": "lerna clean --yes; shx rm -rf node_modules",
+    "commit": "git-cz",
+    "compile:contracts": "yarn wsrun --package $PKG --parallel -c compile:contracts",
+    "coverage": "yarn wsrun --package $PKG --serial -c --if has:changed coverage",
+    "install:all": "yarn install",
+    "lerna": "lerna",
+    "lint": "yarn wsrun --package $PKG --parallel -c lint",
+    "prettier": "prettier --config .prettierrc --write '**/*.{js,jsx,json,md}'",
+    "prettier:ci": "yarn prettier && prettier --config .prettierrc --list-different '**/*.{js,jsx,json,md}'",
+    "publish:docs": "yarn wsrun --package $PKG --parallel -c --if has:changed publish:docs",
+    "rebuild": "run-s clean build",
+    "script:build:artifacts": "node ./packages/monorepo-scripts/artifacts/build.js",
+    "script:orchestrate:artifacts": "./packages/monorepo-scripts/artifacts/orchestrate.sh",
+    "script:publish": "node ./packages/monorepo-scripts/publish/index.js",
+    "script:update:addresses": "node ./packages/monorepo-scripts/addresses/update.js",
+    "test": "yarn wsrun --package $PKG --serial -c --if has:changed --ifDependency test",
+    "test:integration": "yarn wsrun --package $PKG -c --if has:changed test:testNets",
+    "watch": "yarn wsrun --package $PKG --parallel -c watch",
+    "wsrun": "wsrun --exclude-missing --fast-exit",
+    "webpack-defaults": "webpack-defaults"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "@semantic-release/exec": "^4.0.0",
+    "eslint-plugin-react": "^7.19.0",
+    "global": "^4.4.0"
+  }
+}

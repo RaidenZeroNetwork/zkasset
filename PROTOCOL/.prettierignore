@@ -1,0 +1,20 @@
+# folders
+.0x-artifacts/
+.nyc_output/
+.vscode/
+build/
+coverage/
+dist/
+docs/
+lib/
+node_modules/
+
+# files
+.releaserc
+package.json
+
+# packages
+packages/contract-addresses/addresses/
+packages/contract-artifacts/artifacts/
+packages/documentation/*/apis/
+packages/extension/
